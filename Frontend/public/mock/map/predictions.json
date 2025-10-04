@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "source": "Mock Localized Air Quality Prediction System",
+    "description": "Synthetic spatio‑temporal prediction dataset (analysis + short-term forecast) for UI prototyping only. NOT REAL DATA.",
+    "generated_at_utc": "2025-10-04T12:15:00Z",
+    "analysis_cutoff_time": "2025-10-04T12:00:00Z",
+    "forecast_horizon_hours": 4,
+    "model": {
+      "name": "xgb_local_grid_mock",
+      "version": "0.0.1-mock",
+      "target_pollutants": ["pm25_ugm3", "o3_ppb"],
+      "feature_groups": [
+        "station_recent_obs",
+        "tempo_satellite_fields",
+        "meteorology_surface",
+        "diurnal_cyclical",
+        "pbl_ventilation"
+      ],
+      "training_note": "Values are handcrafted and NOT produced by an actual ML pipeline."
+    },
+    "grid_reference": "Aligned with tempo.json & meteo.json (0.1° pseudo grid).",
+    "crs": "EPSG:4326",
+    "temporal_resolution": "hourly",
+    "time_sections": {
+      "analysis_indices": [0,1,2,3,4],
+      "forecast_indices": [5,6,7,8]
+    },
+    "disclaimer": "All values are fabricated for front-end development; do not use for decision making."
+  },
+  "timeIndex": [
+    "2025-10-04T08:00:00Z",
+    "2025-10-04T09:00:00Z",
+    "2025-10-04T10:00:00Z",
+    "2025-10-04T11:00:00Z",
+    "2025-10-04T12:00:00Z",
+    "2025-10-04T13:00:00Z",
+    "2025-10-04T14:00:00Z",
+    "2025-10-04T15:00:00Z",
+    "2025-10-04T16:00:00Z"
+  ],
+  "grid": {
+    "resolution_deg": 0.1,
+    "cells": [
+      {
+        "lat": 24.9,
+        "lon": 46.5,
+        "pm25_ugm3": [28, 29, 30, 31, 32, 33, 34, 33, 31],
+        "o3_ppb":      [52, 55, 57, 60, 62, 64, 66, 67, 66],
+        "pm25_unc_low": [26, 27, 28, 29, 30, 31, 32, 31, 29],
+        "pm25_unc_high":[30, 31, 32, 33, 34, 35, 36, 35, 33],
+        "o3_unc_low":   [50, 53, 54, 57, 59, 61, 63, 64, 63],
+        "o3_unc_high":  [54, 57, 60, 63, 65, 67, 69, 70, 69],
+        "model_confidence": 0.78
+      },
+      {
+        "lat": 24.9,
+        "lon": 46.6,
+        "pm25_ugm3": [27, 28, 29, 30, 31, 32, 33, 32, 30],
+        "o3_ppb":      [49, 51, 54, 56, 59, 61, 63, 64, 63],
+        "pm25_unc_low": [25, 26, 27, 28, 29, 30, 31, 30, 28],
+        "pm25_unc_high":[29, 30, 31, 32, 33, 34, 35, 34, 32],
+        "o3_unc_low":   [47, 49, 51, 53, 56, 58, 60, 61, 60],
+        "o3_unc_high":  [51, 53, 57, 59, 62, 64, 66, 67, 66],
+        "model_confidence": 0.77
+      },
+      {
+        "lat": 25.0,
+        "lon": 46.5,
+        "pm25_ugm3": [29, 30, 31, 32, 33, 34, 35, 34, 32],
+        "o3_ppb":      [55, 57, 60, 64, 66, 68, 70, 71, 70],
+        "pm25_unc_low": [27, 28, 29, 30, 31, 32, 33, 32, 30],
+        "pm25_unc_high":[31, 32, 33, 34, 35, 36, 37, 36, 34],
+        "o3_unc_low":   [53, 55, 58, 62, 64, 66, 68, 69, 68],
+        "o3_unc_high":  [57, 59, 62, 66, 68, 70, 72, 73, 72],
+        "model_confidence": 0.80
+      },
+      {
+        "lat": 25.0,
+        "lon": 46.6,
+        "pm25_ugm3": [28, 29, 30, 31, 32, 33, 34, 33, 31],
+        "o3_ppb":      [51, 53, 56, 60, 62, 64, 66, 67, 66],
+        "pm25_unc_low": [26, 27, 28, 29, 30, 31, 32, 31, 29],
+        "pm25_unc_high":[30, 31, 32, 33, 34, 35, 36, 35, 33],
+        "o3_unc_low":   [49, 51, 54, 58, 60, 62, 64, 65, 64],
+        "o3_unc_high":  [53, 55, 58, 62, 64, 66, 68, 69, 68],
+        "model_confidence": 0.79
+      },
+      {
+        "lat": 25.1,
+        "lon": 46.5,
+        "pm25_ugm3": [30, 31, 32, 33, 34, 35, 36, 35, 33],
+        "o3_ppb":      [58, 60, 62, 66, 68, 70, 72, 73, 72],
+        "pm25_unc_low": [28, 29, 30, 31, 32, 33, 34, 33, 31],
+        "pm25_unc_high":[32, 33, 34, 35, 36, 37, 38, 37, 35],
+        "o3_unc_low":   [56, 58, 60, 64, 66, 68, 70, 71, 70],
+        "o3_unc_high":  [60, 62, 64, 68, 70, 72, 74, 75, 74],
+        "model_confidence": 0.82
+      },
+      {
+        "lat": 25.1,
+        "lon": 46.6,
+        "pm25_ugm3": [29, 30, 31, 32, 33, 34, 35, 34, 32],
+        "o3_ppb":      [54, 56, 59, 63, 65, 67, 69, 70, 69],
+        "pm25_unc_low": [27, 28, 29, 30, 31, 32, 33, 32, 30],
+        "pm25_unc_high":[31, 32, 33, 34, 35, 36, 37, 36, 34],
+        "o3_unc_low":   [52, 54, 57, 61, 63, 65, 67, 68, 67],
+        "o3_unc_high":  [56, 58, 61, 65, 67, 69, 71, 72, 71],
+        "model_confidence": 0.81
+      },
+      {
+        "lat": 25.2,
+        "lon": 46.5,
+        "pm25_ugm3": [31, 32, 33, 34, 35, 36, 37, 36, 34],
+        "o3_ppb":      [60, 63, 65, 69, 71, 73, 75, 76, 75],
+        "pm25_unc_low": [29, 30, 31, 32, 33, 34, 35, 34, 32],
+        "pm25_unc_high":[33, 34, 35, 36, 37, 38, 39, 38, 36],
+        "o3_unc_low":   [58, 61, 63, 67, 69, 71, 73, 74, 73],
+        "o3_unc_high":  [62, 65, 67, 71, 73, 75, 77, 78, 77],
+        "model_confidence": 0.83
+      },
+      {
+        "lat": 25.2,
+        "lon": 46.6,
+        "pm25_ugm3": [30, 31, 32, 33, 34, 35, 36, 35, 33],
+        "o3_ppb":      [57, 59, 62, 66, 68, 70, 72, 73, 72],
+        "pm25_unc_low": [28, 29, 30, 31, 32, 33, 34, 33, 31],
+        "pm25_unc_high":[32, 33, 34, 35, 36, 37, 38, 37, 35],
+        "o3_unc_low":   [55, 57, 60, 64, 66, 68, 70, 71, 70],
+        "o3_unc_high":  [59, 61, 64, 68, 70, 72, 74, 75, 74],
+        "model_confidence": 0.82
+      }
+    ]
+  },
+  "legend": {
+    "pm25_ugm3": {
+      "unit": "µg/m³",
+      "min": 10,
+      "max": 80,
+      "aqi_like_bands": [
+        { "range": [0, 12], "color": "#4CAF50", "label": "Good" },
+        { "range": [12.1, 35.4], "color": "#FFC107", "label": "Moderate" },
+        { "range": [35.5, 55.4], "color": "#FF9800", "label": "Unhealthy (SG)" },
+        { "range": [55.5, 150.4], "color": "#F44336", "label": "Unhealthy" }
+      ],
+      "gradient": {
+        "stops": [
+          { "value": 10, "color": "#2E7D32" },
+          { "value": 25, "color": "#C0CA33" },
+          { "value": 40, "color": "#FFB300" },
+          { "value": 55, "color": "#FB8C00" },
+          { "value": 80, "color": "#E53935" }
+        ]
+      }
+    },
+    "o3_ppb": {
+      "unit": "ppb",
+      "min": 40,
+      "max": 90,
+      "aqi_like_bands": [
+        { "range": [0, 54], "color": "#4CAF50", "label": "Good" },
+        { "range": [55, 70], "color": "#FFC107", "label": "Moderate" },
+        { "range": [71, 85], "color": "#FF9800", "label": "Unhealthy (SG)" },
+        { "range": [86, 105], "color": "#F44336", "label": "Unhealthy" }
+      ],
+      "gradient": {
+        "stops": [
+          { "value": 40, "color": "#274690" },
+          { "value": 55, "color": "#3E8EDE" },
+            { "value": 65, "color": "#6BCBFF" },
+          { "value": 75, "color": "#F9E24C" },
+          { "value": 90, "color": "#E8572A" }
+        ]
+      }
+    }
+  },
+  "ui_hints": {
+    "default_pollutant": "pm25_ugm3",
+    "playback_available": true,
+    "has_uncertainty_bands": true,
+    "supports_bias_overlay": true,
+    "confidence_thresholds": {
+      "high": 0.8,
+      "medium": 0.65
+    },
+    "forecast_labeling": {
+      "analysis_label": "Observed-Driven Analysis",
+      "forecast_label": "Model Forecast"
+    }
+  },
+  "alert_suggestions": {
+    "pm25_ugm3": {
+      "school_threshold": 35,
+      "elderly_threshold": 30,
+      "athlete_advisory": 25
+    },
+    "o3_ppb": {
+      "afternoon_exposure_threshold": 70,
+      "sensitive_group_threshold": 60
+    }
+  },
+  "validation_stub": {
+    "note": "Front-end may compare predictions with stations.latest.values and tempo.json grid.",
+    "metrics_placeholder": {
+      "pm25_ugm3": { "rolling_mae": 3.1, "rolling_bias": 0.4 },
+      "o3_ppb": { "rolling_mae": 2.8, "rolling_bias": 0.6 }
+    }
+  }
+}

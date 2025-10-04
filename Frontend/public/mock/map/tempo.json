@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "source": "TEMPO (Mock)",
+    "description": "Near-real-time mock TEMPO Level-2 like gridded sample for UI development (NOT SCIENTIFIC).",
+    "crs": "EPSG:4326",
+    "temporal_resolution": "hourly",
+    "generated_at_utc": "2025-10-04T12:05:00Z",
+    "processing_version": "0.0.1-mock",
+    "spatial_extent": {
+      "lat_min": 24.8,
+      "lat_max": 25.2,
+      "lon_min": 46.4,
+      "lon_max": 46.8
+    },
+    "pollutants": [
+      { "id": "o3_ppb", "name": "Ozone", "unit": "ppb" },
+      { "id": "no2_ppb", "name": "Nitrogen Dioxide", "unit": "ppb" },
+      { "id": "hcho_ppb", "name": "Formaldehyde", "unit": "ppb" }
+    ],
+    "qa_flag_meaning": {
+      "0": "Good",
+      "1": "Suspect",
+      "2": "Cloud contaminated",
+      "3": "Retrieval failed/missing"
+    },
+    "disclaimer": "Mock data for front-end integration only."
+  },
+  "timeIndex": [
+    "2025-10-04T08:00:00Z",
+    "2025-10-04T09:00:00Z",
+    "2025-10-04T10:00:00Z",
+    "2025-10-04T11:00:00Z",
+    "2025-10-04T12:00:00Z"
+  ],
+  "grid": {
+    "resolution_deg": 0.1,
+    "cells": [
+      {
+        "lat": 24.9,
+        "lon": 46.5,
+        "o3_ppb": [52, 55, 57, 61, 63],
+        "no2_ppb": [18, 21, 19, 17, 16],
+        "hcho_ppb": [3.2, 3.1, 3.0, 3.4, 3.6],
+        "qa": [0, 0, 0, 0, 0]
+      },
+      {
+        "lat": 24.9,
+        "lon": 46.6,
+        "o3_ppb": [49, 51, 54, 56, 59],
+        "no2_ppb": [20, 22, 20, 19, 18],
+        "hcho_ppb": [3.0, 2.9, 3.1, 3.2, 3.5],
+        "qa": [0, 0, 0, 0, 1]
+      },
+      {
+        "lat": 25.0,
+        "lon": 46.5,
+        "o3_ppb": [55, 57, 60, 64, 66],
+        "no2_ppb": [17, 19, 18, 16, 15],
+        "hcho_ppb": [3.3, 3.2, 3.2, 3.5, 3.7],
+        "qa": [0, 0, 0, 0, 0]
+      },
+      {
+        "lat": 25.0,
+        "lon": 46.6,
+        "o3_ppb": [51, 53, 56, 60, 62],
+        "no2_ppb": [19, 21, 19, 18, 16],
+        "hcho_ppb": [3.1, 3.0, 3.2, 3.3, 3.5],
+        "qa": [0, 0, 0, 0, 0]
+      },
+      {
+        "lat": 25.1,
+        "lon": 46.5,
+        "o3_ppb": [58, 60, 62, 67, 69],
+        "no2_ppb": [16, 17, 16, 15, 14],
+        "hcho_ppb": [3.5, 3.4, 3.3, 3.6, 3.8],
+        "qa": [0, 0, 0, 0, 0]
+      },
+      {
+        "lat": 25.1,
+        "lon": 46.6,
+        "o3_ppb": [54, 56, 59, 63, 65],
+        "no2_ppb": [18, 19, 18, 17, 15],
+        "hcho_ppb": [3.2, 3.1, 3.2, 3.4, 3.6],
+        "qa": [0, 0, 0, 0, 0]
+      },
+      {
+        "lat": 25.2,
+        "lon": 46.5,
+        "o3_ppb": [60, 63, 65, 69, 71],
+        "no2_ppb": [15, 16, 15, 14, 13],
+        "hcho_ppb": [3.6, 3.5, 3.4, 3.8, 4.0],
+        "qa": [0, 0, 0, 0, 0]
+      },
+      {
+        "lat": 25.2,
+        "lon": 46.6,
+        "o3_ppb": [57, 59, 62, 66, 68],
+        "no2_ppb": [17, 18, 17, 16, 15],
+        "hcho_ppb": [3.4, 3.3, 3.3, 3.6, 3.7],
+        "qa": [0, 0, 0, 0, 0]
+      }
+    ]
+  },
+  "derived": {
+    "o3_8h_avg_ppb": {
+      "note": "Computed rolling average limited by available mock hours",
+      "current_value": 58.4
+    }
+  },
+  "legend": {
+    "o3_ppb": {
+      "unit": "ppb",
+      "min": 45,
+      "max": 80,
+      "breaks": [50, 55, 60, 65, 70],
+      "aqi_like_bands": [
+        { "range": [0, 54], "color": "#4CAF50", "label": "Good" },
+        { "range": [55, 70], "color": "#FFC107", "label": "Moderate" },
+        { "range": [71, 85], "color": "#FF9800", "label": "Unhealthy (SG)" }
+      ],
+      "gradient": {
+        "stops": [
+          { "value": 45, "color": "#274690" },
+          { "value": 55, "color": "#3E8EDE" },
+          { "value": 60, "color": "#6BCBFF" },
+          { "value": 65, "color": "#F9E24C" },
+          { "value": 70, "color": "#F79D2F" },
+          { "value": 75, "color": "#E8572A" },
+          { "value": 80, "color": "#B5002C" }
+        ]
+      }
+    },
+    "no2_ppb": {
+      "unit": "ppb",
+      "min": 10,
+      "max": 40,
+      "gradient": {
+        "stops": [
+          { "value": 10, "color": "#134611" },
+          { "value": 20, "color": "#3A7D44" },
+            { "value": 30, "color": "#F2C14E" },
+          { "value": 40, "color": "#D95D39" }
+        ]
+      }
+    },
+    "hcho_ppb": {
+      "unit": "ppb",
+      "min": 2.5,
+      "max": 5.0,
+      "gradient": {
+        "stops": [
+          { "value": 2.5, "color": "#1B1F3B" },
+          { "value": 3.2, "color": "#533A71" },
+          { "value": 3.8, "color": "#A675A1" },
+          { "value": 4.4, "color": "#F09FB5" },
+          { "value": 5.0, "color": "#FFCFD2" }
+        ]
+      }
+    }
+  },
+  "uiHints": {
+    "default_pollutant": "o3_ppb",
+    "playback_available": true,
+    "supports_validation_overlay": true,
+    "suggested_refresh_seconds": 300
+  }
+}

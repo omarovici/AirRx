@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "source": "Mock Meteorology Dataset",
+    "description": "Synthetic meteorological fields aligned with mock TEMPO & station domains (UI prototyping only, NOT REAL DATA).",
+    "domain_alignment": "Matches tempo.json grid + timeIndex",
+    "generated_at_utc": "2025-10-04T12:12:00Z",
+    "crs": "EPSG:4326",
+    "temporal_resolution": "hourly",
+    "spatial_resolution_deg": 0.1,
+    "variables": [
+      { "id": "temp_c", "name": "2m Air Temperature", "unit": "°C" },
+      { "id": "rh_pct", "name": "Relative Humidity", "unit": "%" },
+      { "id": "wind_speed_ms", "name": "Wind Speed (10m)", "unit": "m/s" },
+      { "id": "wind_dir_deg", "name": "Wind Direction (from)", "unit": "deg" },
+      { "id": "precip_mm", "name": "Precipitation (hourly)", "unit": "mm" },
+      { "id": "pbl_height_m", "name": "Planetary Boundary Layer Height", "unit": "m" },
+      { "id": "vent_coeff_m2s", "name": "Ventilation Coefficient", "unit": "m^2/s", "definition": "PBLH * WindSpeed" },
+      { "id": "stability_class", "name": "Pasquill Stability Class", "unit": "category", "mapping": { "A": "Very Unstable", "B": "Unstable", "C": "Slightly Unstable", "D": "Neutral", "E": "Slightly Stable", "F": "Stable" } }
+    ],
+    "disclaimer": "All values are fabricated for front-end development; do not use for analysis."
+  },
+  "timeIndex": [
+    "2025-10-04T08:00:00Z",
+    "2025-10-04T09:00:00Z",
+    "2025-10-04T10:00:00Z",
+    "2025-10-04T11:00:00Z",
+    "2025-10-04T12:00:00Z"
+  ],
+  "grid": {
+    "cells": [
+      {
+        "lat": 24.9,
+        "lon": 46.5,
+        "temp_c":     [30.2, 31.0, 31.8, 32.6, 33.3],
+        "rh_pct":     [48,   46,   44,   41,   39],
+        "wind_speed_ms": [3.4, 3.6, 3.9, 4.1, 4.5],
+        "wind_dir_deg":  [110, 115, 120, 125, 130],
+        "precip_mm":     [0, 0, 0, 0, 0],
+        "pbl_height_m":  [900, 1050, 1200, 1350, 1500],
+        "vent_coeff_m2s":[3060, 3780, 4680, 5535, 6750],
+        "stability_class":["C","C","C","D","D"]
+      },
+      {
+        "lat": 24.9,
+        "lon": 46.6,
+        "temp_c":     [30.0, 30.7, 31.6, 32.4, 33.1],
+        "rh_pct":     [49, 47, 45, 42, 40],
+        "wind_speed_ms": [3.1, 3.4, 3.7, 4.0, 4.2],
+        "wind_dir_deg":  [112, 118, 122, 127, 132],
+        "precip_mm":     [0,0,0,0,0],
+        "pbl_height_m":  [880, 1000, 1150, 1300, 1450],
+        "vent_coeff_m2s":[2728, 3400, 4255, 5200, 6090],
+        "stability_class":["C","C","C","D","D"]
+      },
+      {
+        "lat": 25.0,
+        "lon": 46.5,
+        "temp_c":     [29.8, 30.5, 31.3, 32.1, 32.9],
+        "rh_pct":     [50, 48, 46, 43, 41],
+        "wind_speed_ms": [3.6, 3.9, 4.2, 4.5, 4.8],
+        "wind_dir_deg":  [108, 112, 118, 123, 128],
+        "precip_mm":     [0,0,0,0,0],
+        "pbl_height_m":  [920, 1080, 1250, 1400, 1550],
+        "vent_coeff_m2s":[3312, 4212, 5250, 6300, 7440],
+        "stability_class":["C","C","C","D","D"]
+      },
+      {
+        "lat": 25.0,
+        "lon": 46.6,
+        "temp_c":     [29.7, 30.4, 31.1, 31.9, 32.7],
+        "rh_pct":     [51, 49, 47, 44, 42],
+        "wind_speed_ms": [3.3, 3.7, 4.0, 4.3, 4.6],
+        "wind_dir_deg":  [110, 115, 120, 124, 129],
+        "precip_mm":     [0,0,0,0,0],
+        "pbl_height_m":  [910, 1060, 1230, 1380, 1520],
+        "vent_coeff_m2s":[3003, 3922, 4920, 5934, 6992],
+        "stability_class":["C","C","C","D","D"]
+      },
+      {
+        "lat": 25.1,
+        "lon": 46.5,
+        "temp_c":     [29.4, 30.1, 30.9, 31.7, 32.4],
+        "rh_pct":     [52, 50, 48, 46, 44],
+        "wind_speed_ms": [3.8, 4.0, 4.3, 4.7, 5.0],
+        "wind_dir_deg":  [106, 110, 116, 121, 126],
+        "precip_mm":     [0,0,0,0,0],
+        "pbl_height_m":  [950, 1100, 1280, 1440, 1600],
+        "vent_coeff_m2s":[3610, 4400, 5504, 6768, 8000],
+        "stability_class":["C","C","C","D","D"]
+      },
+      {
+        "lat": 25.1,
+        "lon": 46.6,
+        "temp_c":     [29.2, 29.9, 30.7, 31.5, 32.2],
+        "rh_pct":     [53, 51, 49, 46, 45],
+        "wind_speed_ms": [3.5, 3.8, 4.1, 4.5, 4.8],
+        "wind_dir_deg":  [107, 112, 118, 123, 127],
+        "precip_mm":     [0,0,0,0,0],
+        "pbl_height_m":  [940, 1080, 1260, 1420, 1580],
+        "vent_coeff_m2s":[3290, 4104, 5166, 6390, 7584],
+        "stability_class":["C","C","C","D","D"]
+      },
+      {
+        "lat": 25.2,
+        "lon": 46.5,
+        "temp_c":     [29.0, 29.7, 30.5, 31.3, 32.1],
+        "rh_pct":     [54, 52, 50, 47, 46],
+        "wind_speed_ms": [4.0, 4.2, 4.5, 4.9, 5.2],
+        "wind_dir_deg":  [104, 108, 114, 119, 124],
+        "precip_mm":     [0,0,0,0,0],
+        "pbl_height_m":  [980, 1120, 1300, 1480, 1650],
+        "vent_coeff_m2s":[3920, 4704, 5850, 7252, 8580],
+        "stability_class":["C","C","C","D","D"]
+      },
+      {
+        "lat": 25.2,
+        "lon": 46.6,
+        "temp_c":     [28.9, 29.6, 30.4, 31.1, 31.9],
+        "rh_pct":     [55, 53, 51, 48, 47],
+        "wind_speed_ms": [3.7, 3.9, 4.3, 4.6, 5.0],
+        "wind_dir_deg":  [105, 110, 116, 121, 125],
+        "precip_mm":     [0,0,0,0,0],
+        "pbl_height_m":  [970, 1110, 1290, 1460, 1620],
+        "vent_coeff_m2s":[3589, 4329, 5547, 6716, 8100],
+        "stability_class":["C","C","C","D","D"]
+      }
+    ]
+  },
+  "derived_fields_note": "Ventilation coefficient is a simple product; true implementations may require mixing layer depth + averaged wind.",
+  "legend_suggestions": {
+    "temp_c": { "min": 28, "max": 40, "gradient": ["#274690", "#3E8EDE", "#6BCBFF", "#FFE066", "#FF8C42"] },
+    "rh_pct": { "min": 30, "max": 80, "gradient": ["#F5F3FF", "#A5B4FC", "#6366F1", "#312E81"] },
+    "wind_speed_ms": { "breaks": [0, 2, 4, 6, 8], "colors": ["#F0F9E8", "#BAE4BC", "#7BCCC4", "#2B8CBE", "#084081"] },
+    "pbl_height_m": { "breaks": [500, 800, 1100, 1400, 1700], "colors": ["#F1F8FF", "#B3E5FC", "#4FC3F7", "#0288D1", "#01579B"] },
+    "stability_class": {
+      "categories": {
+        "A": "#FF1744",
+        "B": "#FF7043",
+        "C": "#FFB300",
+        "D": "#9E9E9E",
+        "E": "#6D4C41",
+        "F": "#4E342E"
+      }
+    }
+  },
+  "uiHints": {
+    "default_variable": "wind_speed_ms",
+    "wind_layer_supported": true,
+    "show_vector_field_for": ["wind_speed_ms", "wind_dir_deg"],
+    "playback_available": true,
+    "suggested_refresh_seconds": 600
+  }
+}
